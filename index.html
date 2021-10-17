@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Visualization</title>
+  <script src="./libraries/p5.js"></script>
+  <script src="./libraries/p5.sound.js"></script>
+  <link rel="icon" href="./assets/icon.png">
+  <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+  <div id='optionsDiv'>
+    <div id='uploadersDiv'>
+      <label onclick='handleInputTypeChange("file");' id='musicFileUploader' class="musicUploader">
+        <input id='musicUploaderInput' type="file" onchange="handleSongSubmit();" accept=".mp3"/>
+        Upload Song
+      </label>
+      <label onclick='handleInputTypeChange("mic");' class="musicUploader">
+        Use Microphone
+    </div>
+    <p id='songTitle'></p>
+    <div id='buttons'>
+      <button class='musicControllerBtn' onclick="handlePlayOrPause();" id='playOrPauseBtn'>Play</button>
+      <button class='musicControllerBtn' onclick="handleStop();" id='stopBtn'>Stop</button>
+      <button class='musicControllerBtn' onclick="handleAmp();" id='ampBtn'>Amplitudes</button>
+      <button class='musicControllerBtn' onclick="handleReset();" id='resetBtn'>Reset</button>
+    </div>
+  </div>
+  <div id="p5_loading" class="loadingclass"></div>
+    <script src="./js/index.js"></script>
+</body>
+
+</html>
